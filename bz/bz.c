@@ -190,7 +190,7 @@ int process()
         case 2:
           secondOperand = E[ec--];
           firstOperand = E[ec--];
-          op = operationSupport(T[tc]);
+          op = operationSupport(T[tc--]);
           E[++ec] = op(firstOperand, secondOperand);
           T[++tc] = input;
           break;
@@ -216,14 +216,14 @@ int process()
       }
     }
 
-    //debug(input, funcNum);
+    debug(input, funcNum);
 
     // printf("num = %li\n", number);
 
     i++;
   }
 
-  //debug(' ', -1);
+  debug(' ', -1);
   return 1;
   // printf("%s\n", &operand);
 }
